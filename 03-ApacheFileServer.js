@@ -31,9 +31,11 @@ server.on('request', function(request, response) {
             var content = ''
             files.forEach(function(item) {
                 content += `
-                    <tr>
-                        <td><a href="${fileDir + '/' + item}">${item}</a></td>
-                    </tr>
+                <tr>
+                    <td data-value="apple/"><a class="icon dir" href="${fileDir + '/' + item}">${item}/</a></td>
+                    <td class="detailsColumn" data-value="0"></td>
+                    <td class="detailsColumn" data-value="1509589967">2017/11/2 上午10:32:47</td>
+                </tr>
                 `
             })
             
